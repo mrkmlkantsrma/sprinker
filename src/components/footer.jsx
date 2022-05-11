@@ -11,7 +11,11 @@ function Footer(props) {
             Demo paragraph about my website
             </p>
             <ul className="list-inline mt-4">
-          
+              <li className="list-inline-item">
+                <Link to="#" title="twitter">
+                  <i className="fa fa-twitter"></i>
+                </Link>
+              </li>
               <li className="list-inline-item">
                 <Link to="#" title="facebook">
                   <i className="fa fa-facebook"></i>
@@ -22,7 +26,16 @@ function Footer(props) {
                   <i className="fa fa-instagram"></i>
                 </Link>
               </li>
-              
+              <li className="list-inline-item">
+                <Link to="#" title="pinterest">
+                  <i className="fa fa-pinterest"></i>
+                </Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="#" title="vimeo">
+                  <i className="fa fa-vimeo"></i>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
@@ -80,7 +93,25 @@ function Footer(props) {
             <p className="text-muted mb-4">
               Demo paragrph to newsletter
             </p>
-            
+            <div className="p-1 rounded border">
+              <div className="input-group">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  aria-describedby="button-addon1"
+                  className="form-control border-0 shadow-0"
+                />
+                <div className="input-group-append">
+                  <button
+                    id="button-addon1"
+                    type="submit"
+                    className="btn btn-link"
+                  >
+                    <i className="fa fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +120,7 @@ function Footer(props) {
       <div className=" py-4">
         <div className="container text-center">
           <p className="text-muted mb-0 py-2">
-            © 2022 KamalKant All rights reserved.
+            © 2019 KamalKant All rights reserved.
           </p>
         </div>
       </div>

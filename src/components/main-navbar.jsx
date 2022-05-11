@@ -1,5 +1,11 @@
-import { useState, useEffect, Fragment, useRef } from "react";
+import { useState, useEffect, Fragment } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import { Link, NavLink } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
+import ClearAllOutlinedIcon from "@material-ui/icons/ClearAllOutlined";
+import { connect } from "react-redux";
 
 function MainNavBar(props) {
 
@@ -8,6 +14,18 @@ function MainNavBar(props) {
       className={`navbar  navbar-expand-lg navbar-dark bg-light-custom fixed-top  `}
     >
       <div className="container-fluid">
+        {props.location.pathname === "/dashboard" && (
+          <IconButton
+            onClick={handleclick}
+            color="secondary"
+            style={{ color: "white" }}
+            aria-label="upload picture"
+            component="span"
+          >
+            <ClearAllOutlinedIcon></ClearAllOutlinedIcon>
+          </IconButton>
+        )}
+
         <Link to="/" className="navbar-brand">
           KamalKant 
         </Link>
@@ -36,6 +54,40 @@ function MainNavBar(props) {
                  Fist Link
               </NavLink>
             </li>
+
+            {props.user ? (
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  {props.user.name}
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <Link className="dropdown-item" to="/">
+                     Text 1
+                  </Link>
+                  <Link className="dropdown-item" to="/">
+                    Text 2
+                  </Link>
+
+                  <div className="dropdown-divider"></div>
+                  <Link
+                    onClick={props.logout}
+                    className="dropdown-item"
+                    to="/logout"
+                  >
+                    Sign out
+                  </Link>
+                </div>
+              </li>
+            ) : (
+              <Fragment>
                 <li className="nav-item">
                   <Link to="/" className="nav-link">
                      Second Link
@@ -46,6 +98,8 @@ function MainNavBar(props) {
                     Third link
                   </Link>
                 </li>
+              </Fragment>
+            )}
           </ul>
         </div>
       </div>
@@ -53,4 +107,11 @@ function MainNavBar(props) {
   );
 }
 
-export default MainNavBar;
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    ui: state.ui
+  };
+};
+export default connect(mapStateToProps, {
+  openDrawer
+})(withRouter(MainNavBar));

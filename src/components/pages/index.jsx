@@ -1,15 +1,60 @@
 import { Component } from "react";
 import Banner from "../Banner";
 import CardCol from "../card-col";
+import learning from "../../assets/undraw_Online_learning_re_qw08.svg";
+import education from "../../assets/undraw_education_f8ru.svg";
+import knowledge from "../../assets/undraw_road_to_knowledge_m8s0.svg";
+import teaching from "../../assets/undraw_teaching_f1cm.svg";
+import { Player, BigPlayButton } from "video-react";
 
+import { Link } from "react-router-dom";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./pages.css";
+import Slider from "react-slick";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import "animate.css";
 
 class Homepage extends Component {
   render() {
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      nextArrow: <ArrowForwardIosIcon />,
+      prevArrow: <ArrowBackIosIcon />,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 575.98,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
     return (
       <div>
         <Banner />
@@ -19,21 +64,21 @@ class Homepage extends Component {
               title="Pass on Your knowledge"
               text=" First card Paragraph"
               alt="Watch lesson"
-              image={""}
+              image={teaching}
               width={"40%"}
             />
             <CardCol
               title="Social Learning"
               text=" Second paragraph "
               alt="Watch lesson"
-              image={""}
+              image={education}
               width={"40%"}
             />
             <CardCol
               title="Non-stop Learning "
               text=" Thrid paragraph"
               alt="Watch lesson"
-              image={""}
+              image={knowledge}
               width={"60%"}
             />
 
@@ -55,7 +100,7 @@ class Homepage extends Component {
                 <div className="container pt-5">
                   <div className="row pb-3 p-3">
                     <div className="col-md-4 mr-3">
-                      <img width="100%" src={""} />
+                      <img width="100%" src={learning} />
                     </div>
                     <div className="col-md-7">
                       <div className="section-h1">
@@ -70,12 +115,23 @@ class Homepage extends Component {
                         <p>
                           paragraph message !
                         </p>
-                        
+                        <p>
+                          <Link to="/" className="btn  btn-info  m-2">
+                            check More
+                          </Link>
+                          <Link
+                            to="/"
+                            className="btn  btn btn-secondary  m-2"
+                          >
+                            check this button
+                          </Link>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              
               <div
                 className="row  pt-5 justify-content-md-center"
                 style={{ background: "#5c1442", paddingBottom: "1rem" }}
@@ -92,7 +148,35 @@ class Homepage extends Component {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
 
-                  
+                  <form
+                    className={"classes.root"}
+                    noValidate
+                    autoComplete="off"
+                  >
+                    <div className="p-1 rounded border">
+                      <div className="input-group">
+                        <input
+                          required
+                          type="email"
+                          placeholder="Enter your email address"
+                          aria-describedby="button-addon1"
+                          className="form-control border-0 shadow-0"
+                        />
+                        <div className="input-group-append">
+                          <button
+                            id="button-addon1"
+                            type="submit"
+                            className="btn btn-link"
+                          >
+                            <i
+                              className="fa fa-paper-plane"
+                              aria-hidden="true"
+                            ></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
