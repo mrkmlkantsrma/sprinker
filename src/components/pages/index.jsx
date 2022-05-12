@@ -131,7 +131,173 @@ class Homepage extends Component {
                   </div>
                 </div>
               </div>
-              
+              <div className="row  mb-5 pt-5 pb-3 ">
+                <div
+                  className="container mt-5">
+                  <div className="row    pb-3 justify-content-md-center">
+                    <div className="col-sm-12 col-md-8">
+                      <h2
+                        className="display-4 text-center pt-5 pb-2   wow bounceInUp"
+                        style={{
+                          color: "#3f3d56;",
+                          fontSize: "100px",
+                          fontWeight: "bold"
+                        }}
+                      >
+                        Lorem ipsum
+                      </h2>
+                      <p className="lead text-center pb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint reprehenderit a dolores, atque dignissimos ducimus
+                        quo voluptate inventore reiciendis
+                      </p>
+                      <Player
+                        playsInline
+                        src={
+                          "https://player.vimeo.com/external/334495726.sd.mp4?s=5c18cee8d585c4fd22b98c5af54d0dc4eeef1bda&profile_id=139&oauth2_token_id=57447761"
+                        }
+                      >
+                        <BigPlayButton position="center" />
+                      </Player>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="container pt-5 mt-5  pb-3 rounded-top shadow" >
+                  <div className="row  pt-3 pb-3">
+                    <div className="container mt-5 ">
+                      <div className="row    pb-3 justify-content-md-center">
+                        <div className="col-sm-12 col-md-8">
+                          <div className="col-md-12 pt-3 pb-3">
+                            <h2
+                              className="display-4 text-center"
+                              style={{
+                                color: "#3f3d56;",
+                                fontSize: "100px",
+                                fontWeight: "bold"
+                              }}
+                            >
+                              Lorem ipsum
+                            </h2>
+                            <p className=" text-center pb-4 pt-2">
+                              , consectetur adipisicing elit. Fugiat possimus
+                              architecto delectus ipsam vero, aperiam dolorum
+                              molestiae sint perspiciatis exercitationem. Enim
+                              magni corporis deserunt doloribus accusantium
+                              maiores labore, aliquid tempora.
+                            </p>
+
+                            <Slider {...settings} className="slider">
+                              <div
+                                className="slide-item"
+                                style={{ background: "white" }}
+                              >
+                                <img
+                                  src="https://images.pexels.com/photos/3671394/pexels-photo-3671394.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                  alt=""
+                                  width="80%"
+                                  height="220px"
+                                  className="p-2 border d-block mr-auto ml-auto"
+                                  style={{ background: "white" }}
+                                />
+                                <h3 className="text-center">
+                                  Lorem ipsum dolor
+                                </h3>
+                                <p className="text-center ">
+                                  sit amet consec te{" "}
+                                </p>
+                                <div className="cs-border"></div>
+                                <p className="text-center">
+                                  sit amet consectetur adipisicing elit. Ad
+                                  quaerat, aliquam nesciunt error corrupti
+                                  exercitationem excepturi odi voluptatibus
+                                  quasi harum?
+                                </p>
+                              </div>
+                              <div className="slide-item">
+                                <img
+                                  src="https://images.pexels.com/photos/5212655/pexels-photo-5212655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                  alt=""
+                                  width="80%"
+                                  height="220px"
+                                  className="p-2 border d-block mr-auto ml-auto"
+                                  style={{ background: "white" }}
+                                />
+                                <h3 className="text-center">
+                                  Lorem ipsum dolor
+                                </h3>
+                                <p className="text-center ">
+                                  sit amet consec te{" "}
+                                </p>
+                                <div className="cs-border"></div>
+                                <p className="text-center">
+                                  sit amet consectetur adipisicing elit. Ad
+                                  quaerat, aliquam nesciunt error corrupti
+                                  exercitationem excepturi deserunt ab
+                                  praesentium rerum repellat labore nihil
+                                  inventore tempore eum commodi voluptatibus
+                                  quasi harum?
+                                </p>
+                              </div>
+                              <div className="slide-item">
+                                <img
+                                  src="https://images.pexels.com/photos/3764499/pexels-photo-3764499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                  alt=""
+                                  width="80%"
+                                  height="220px"
+                                  className="p-2 border d-block mr-auto ml-auto"
+                                  style={{ background: "white" }}
+                                />
+                                <h3 className="text-center">
+                                  Lorem ipsum dolor
+                                </h3>
+                                <p className="text-center ">
+                                  sit amet consec te{" "}
+                                </p>
+                                <div className="cs-border"></div>
+                                <p className="text-center">
+                                  sit amet consectetur adipisicing elit. Ad
+                                  quaerat, aliquam nesciunt error corrupti
+                                  exercitationem excepturi deserunt ab
+                                  praesentium rerum repellat labore nihil
+                                  inventore tempore eum commodi voluptatibus
+                                  quasi harum?
+                                </p>
+                              </div>
+
+                              <div className="slide-item">
+                                <img
+                                  src="https://images.pexels.com/photos/3764499/pexels-photo-3764499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                  alt=""
+                                  width="80%"
+                                  height="220px"
+                                  className="p-2 border d-block mr-auto ml-auto"
+                                  style={{ background: "white" }}
+                                />
+                                <h3 className="text-center">
+                                  Lorem ipsum dolor
+                                </h3>
+                                <p className="text-center ">
+                                  sit amet consec te{" "}
+                                </p>
+                                <div className="cs-border"></div>
+                                <p className="text-center">
+                                  sit amet consectetur adipisicing elit. Ad
+                                  quaerat, aliquam nesciunt error corrupti
+                                  exercitationem excepturi deserunt ab
+                                  praesentium rerum repellat labore nihil
+                                  inventore tempore eum commodi voluptatibus
+                                  quasi harum?
+                                </p>
+                              </div>
+                            </Slider>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div
                 className="row  pt-5 justify-content-md-center"
                 style={{ background: "#5c1442", paddingBottom: "1rem" }}
