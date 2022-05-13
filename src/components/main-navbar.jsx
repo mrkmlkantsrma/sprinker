@@ -1,13 +1,26 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link, NavLink } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import ClearAllOutlinedIcon from "@material-ui/icons/ClearAllOutlined";
+import { openDrawer, closeDrawer } from "../store/actions/actions";
 import { connect } from "react-redux";
 
 function MainNavBar(props) {
+  const ref = useRef();
+
+  const [style, setStyle] = useState({
+    width: "300px",
+    background: "#3b988d",
+    border: "#45867e",
+    transition: " 1s all"
+  });
+
+  const handleclick = (e) => {
+    props.openDrawer();
+  };
 
   return (
     <nav

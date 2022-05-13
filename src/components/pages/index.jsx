@@ -1,10 +1,10 @@
 import { Component } from "react";
 import Banner from "../Banner";
 import CardCol from "../card-col";
-import learning from "../../assets/undraw_Online_learning_re_qw08.svg";
-import education from "../../assets/undraw_education_f8ru.svg";
-import knowledge from "../../assets/undraw_road_to_knowledge_m8s0.svg";
-import teaching from "../../assets/undraw_teaching_f1cm.svg";
+import learning from "../../undraw_Online_learning_re_qw08.svg";
+import education from "../../undraw_education_f8ru.svg";
+import knowledge from "../../undraw_road_to_knowledge_m8s0.svg";
+import teaching from "../../undraw_teaching_f1cm.svg";
 import { Player, BigPlayButton } from "video-react";
 
 import { Link } from "react-router-dom";
