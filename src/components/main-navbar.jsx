@@ -40,7 +40,7 @@ function MainNavBar(props) {
         )}
 
         <Link to="/" className="navbar-brand">
-          KamalKant 
+          BROwNIC 
         </Link>
         <button
           className="navbar-toggler"
@@ -61,10 +61,10 @@ function MainNavBar(props) {
                 activeStyle={{
                   fontWeight: "bold"
                 }}
-                to="/courses"
+                to="/login"
                 className="nav-link"
               >
-                 Fist Link
+                 login
               </NavLink>
             </li>
 
@@ -102,13 +102,8 @@ function MainNavBar(props) {
             ) : (
               <Fragment>
                 <li className="nav-item">
-                  <Link to="/" className="nav-link">
-                     Second Link
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/" className="nav-link">
-                    Third link
+                  <Link to="/register" className="nav-link">
+                     Register
                   </Link>
                 </li>
               </Fragment>
